@@ -14,7 +14,7 @@ theme:
     - content.code.copy # allows users to copy code blocks
 
 plugins:
-  - offline
+  # - offline
   - search
 markdown_extensions:
   - pymdownx.highlight: # for colouring code blocks
@@ -32,6 +32,20 @@ nav:
   - Introduction: index.md
 
   - Getting Started: 
-    - prerequisites.md
-    - rpi_installation.md
-    - rpi_post_installation.md
+    - getting_started/prerequisites.md
+    - getting_started/installation.md
+    - getting_started/post_installation.md
+
+  - Set Up:
+    - Remote Access: 
+      - setup/ra_overview.md
+      - setup/ra_method.md
+      - setup/ra_tech.md
+    - setup/static_ip.md
+    - setup/installation.md
+
+  - Portainer: portainer/portainer.md
+
+  - Filebrowser:
+    - Overview: filebrowser/filebrowser.md
+    - Installation: filebrowser/installation.md
