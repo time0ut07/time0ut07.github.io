@@ -4,6 +4,10 @@
 
 *Github Link: [https://github.com/time0ut07/HomeServer](https://github.com/time0ut07/HomeServer)*
 
+
+**NOTE: CURRENTLY STILL WORKING ON THIS PROJECT, DOCS AND REPO NOT COMPLETED!! :D**
+---
+
 Ever wanted to build your very own home server? If so, you’re in the right place! Whether you are new to RPI or have done projects using RPI, thie guide is for you. In this guide, I will take you through the entire process of building a home server from scratch. Whether you're a tech enthusiast or someone looking to centralize your files and services, this guide will provide you with step-by-step instructions and insights.
 
 [Image of portainer containers when i have alot]
