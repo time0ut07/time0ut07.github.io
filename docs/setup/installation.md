@@ -41,7 +41,7 @@ Run the command below to pull portainer docker image and create a docker for por
 wget -qO- https://raw.githubusercontent.com/time0ut07/HomeServer/main/scripts/install_portainer.sh | bash
 ```
 
-Once completed, go to `https://localhost:9000`
+Once completed, go to `http://localhost:9000`/`https://localhost:9443`
 
 ## Portainer Installation (Manual)
 

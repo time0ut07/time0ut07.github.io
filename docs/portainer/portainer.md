@@ -11,7 +11,7 @@
 
 ## Sign In 
 
-If your installation went by smoothly without any issue, you should see a page that allows you to create a user (admin).
+If your installation went by smoothly without any issue, you should see a page (`http://localhost:9000`/`https://localhost:9443`) that allows you to create a user (admin).
 
 ![portainer first look](../img/port_firstlook.png)
 
