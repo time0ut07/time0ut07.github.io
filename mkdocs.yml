@@ -48,4 +48,4 @@ nav:
 
   - Filebrowser:
     - Overview: filebrowser/filebrowser.md
-    - Installation: filebrowser/installation.md
+    #- Installation: filebrowser/installation.md

@@ -1,6 +1,6 @@
 # Installing OS
 ---
-I recommand using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) in install an OS onto your SD Card. You will need another computer together with an SD card reader to install the image. It is advised to [reformat](https://www.sdcard.org/downloads/formatter/) your SD card if it was used before.
+I recommend using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) in install an OS onto your SD Card. You will need another computer together with an SD card reader to install the image. It is advised to [reformat](https://www.sdcard.org/downloads/formatter/) your SD card if it was used before.
 
 ## Raspberry Pi Imager
 

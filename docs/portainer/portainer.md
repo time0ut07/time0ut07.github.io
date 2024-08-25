@@ -41,7 +41,7 @@ docker ps
 
 Do explore portainer as much as you want!
 
-# See also
+## See also
 
 [Portainer's Universal Container Management Platform](https://www.portainer.io/products/portainer-platform-universal-container-management-platform#:~:text=Why%20Portainer%3F,of%20container%20technologies%20and%20environments.)
 
