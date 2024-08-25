@@ -1,6 +1,6 @@
 # Filebrowser - Installation
 
-There are many different ways to start a filebrowser container.
+There are many different ways to install and run a filebrowser container.
 
 ## Automated
 
