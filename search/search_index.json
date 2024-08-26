@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Main","text":"<p>Link to homeserver guide: https://time0ut07.github.io/homeserver</p>"}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Main","text":"<p>Link to homeserver guide: https://time0ut07.github.io/guide/homeserver</p>"}]}
