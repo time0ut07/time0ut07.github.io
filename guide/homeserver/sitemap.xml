@@ -2,62 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://time0ut07.github.io/HomeServer/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/filebrowser/filebrowser/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/filebrowser/installation/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://time0ut07.github.io/HomeServer/filebrowser/post_installation/</loc>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/getting_started/installation/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/getting_started/post_installation/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/getting_started/prerequisites/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/portainer/portainer/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/setup/installation/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/setup/ra_method/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/setup/ra_overview/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/setup/ra_tech/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://time0ut07.github.io/HomeServer/setup/static_ip/</loc>
-         <lastmod>2024-08-25</lastmod>
+         <lastmod>2024-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
