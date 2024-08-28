@@ -14,6 +14,8 @@
         <link rel="prev" href="../installation/">
       
       
+        <link rel="next" href="../../pihole/overview/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
@@ -68,6 +70,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#filebrowser-post-installation" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -566,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../filebrowser/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,6 +621,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Post Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -625,6 +645,148 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pi-hole
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pi-hole
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/post_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Installation
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -654,6 +816,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -668,9 +858,19 @@
                   
 
 
-  <h1>Post Installation</h1>
-
-
+<h1 id="filebrowser-post-installation">Filebrowser - Post Installation</h1>
+<hr />
+<p>After rebooting your RPI, advance to <code>https://localhost:8001</code>. You should see the login page for filebrowser.</p>
+<p><img alt="filebrowser login page" src="../../img/filebrowser/fb_login.png" /></p>
+<p>Enter the default credentials, admin:admin, and login. You should see something like this:</p>
+<p><img alt="filebrowser home page" src="../../img/filebrowser/fb_home_page.png" /></p>
+<p>It is recommended that your admin credential for filebrowser. To do so, go to Settings &gt; Profile Settings, and change your password.</p>
+<h2 id="benefits">Benefits</h2>
+<p>Having filebrowser can bring many benefits such as having a centralized place for all users to manage files. Admins are able to manage users, define permissions, and even set scopes for access control and organising. With an easy to use GUI provided, users can easily manage their files without needing to use commands. Speaking of commands, filebrowser allows users to execute custom commands in their terminal. Do explore filebrowser more to fully utilize it.</p>
+<p>Users are also able to modify filebrowser settings using the CLI. Find out more about filebrowser CLI commands <a href="https://filebrowser.org/cli">here</a>.</p>
+<h2 id="see-also">See also</h2>
+<p><a href="https://filebrowser.org">Filebrowser offical documentation</a></p>
+<p><a href="https://github.com/filebrowser/filebrowser">Filebrowser official github</a></p>
 
 
 
@@ -715,6 +915,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="../../pihole/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../filebrowser/filebrowser/" class="md-nav__link">
+      <a href="../../filebrowser/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,6 +674,111 @@
   
     <li class="md-nav__item">
       <a href="../../filebrowser/post_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pi-hole
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pi-hole
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pihole/post_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +872,7 @@
 <div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh<span class="w"> </span>&lt;username&gt;@&lt;RPI<span class="w"> </span>IP<span class="w"> </span>address&gt;
 </span></code></pre></div>
 <p>To get your RPI's IP address, you can use the command <code>ifconfig</code> in your RPI. Look for your network interface, wlan0 for WiFi and eth0 for Ethernet.</p>
-<p><img alt="ifconfig image" src="../../img/ifconfig.png" /></p>
+<p><img alt="ifconfig image" src="../../img/getting_started/ifconfig.png" /></p>
 <p>Another method to get your RPI's IP address is by going into your router's webpage and look at the list of connected device. Locate the hostname you have assigned to your RPI and look at the corresponding IP address.</p>
 <p>Once you have remotely accessed your RPI, type in the following command:</p>
 <div class="language-shell highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y
