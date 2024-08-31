@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    max-width: 100%;
+}
+
+.nav-link:hover {
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+
+.arrowup {
+    z-index: 10;
+    margin-left: 70em;
+    margin-top: -10em
+}
+
+
+.arrowup:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out
+}
+
+.progress_bar {
+    height: 5px;
+}
+
+.navbar {
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*  =================================================================================
+                                       Home Page
+    ================================================================================= */
+
+.home {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+      
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+.home h1 {
+    font-size: 15vh;
+    margin-top: -20vh;
+    margin-left: 0.5em;
+    display: inline-block
+}
+
+.home icons {
+    margin-top: 10vh;
+}
+
+.project-cards-container {
+    display: flex;    
+    gap: 20px;                
+    justify-content: center;    
+    flex-wrap: wrap;        
+}
+    
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(33.3333333% - 20px);  
+    box-sizing: border-box;    
+    margin: 1em 0; 
+    border: 1px solid rgba(0, 0, 0, 0.1);        
+}
+    
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+    
+.project-card p {
+    margin: 10px 0;
+    color: #555;
+}
+    
+.buttons {
+    margin: 15px 0;   
+}
+
+.buttons * {
+    opacity: 0.6;
+}
+
+.buttons button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #000; /* Default text and icon color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.buttons button:hover {
+    background-color: #dc3545;
+    color: #fff; /* Change text and icon color to white on hover */
+    opacity: 1; /* Ensure full opacity on hover */
+}
+    
+.languages {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.languages {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Adjust the space between the <p> and <span> */
+}
+
+.languages p {
+    margin: 0; /* Remove default margin */
+}
+
+.languages span {
+    margin: 0; /* Remove default margin */
+}
+
+    
+.updated {
+    font-size: 12px;
+    color: #999;
+}
+
+code {
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #e1e1e1; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 2px 4px; /* Padding around the text */
+    font-family: "Courier New", Courier, monospace; /* Monospace font */
+    font-size: 90%; /* Slightly smaller font size */
+    color: black; /* Text color (optional) */
+    font-weight: bold;
+}
+
+.documentation-container {
+    display: flex;    
+    gap: 20px;                
+    justify-content: center;    
+    flex-wrap: wrap;        
+}
+    
+.documentation-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;  
+    box-sizing: border-box;    
+    margin: 1em 0; 
+    border: 1px solid rgba(0, 0, 0, 0.1);        
+}
+
+.documentation-card h3 {
+    font-size: 20px
+}
+
+.documentation-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/*  =================================================================================
+                                      Projects
+    ================================================================================= */
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+  
+.project-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+    /*  =================================================================================
+                                        Footer
+    ================================================================================= */
+
+footer {
+    background-color: #dc3545; /* Background color */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center text */
+    width: 100%;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+.qlinks a {
+    color: white;
+    text-decoration: none; 
+}
+
+.follow-me a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.icons {
+    position: relative;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.icons a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the color of the parent element */
+}
+
+
+.instagram, .github, .linkedin, .telegram, .email {
+    font-size: 5em;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.instagram:hover, .github:hover, .linkedin:hover, .telegram:hover, .email:hover {
+    transform: translateY(-10px)
+}
+
+/*  =================================================================================
+                                      Animation
+    ================================================================================= */
+
+/* Fade ins */
+.fade-in-left{
+    animation: fadeInLeft 2.5s;
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(8vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}  
+.fade-in-right{
+    animation: fadeInRight 2.5s;
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-8vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}  
+.fade-in-up{
+    animation: fadeInUp 2.5s;
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(8vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}  
+.fade-in-down{
+    animation: fadeInDown 2.5s;
+}
+@keyframes fadeInDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-8vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* typewriter */
+.typewriter-animation{
+    overflow: hidden;
+    border-right: .15em solid #d9534f;
+    white-space: nowrap;
+    height: fit-content;
+    animation: 
+        typing 2.5s steps(20, end),
+        blink-caret .75s step-end;
+}
+  
+/* The typing effect */
+@keyframes typing{
+    0%{width: 0}
+    100%{width: 8em}
+}
+  
+/* The blinking cursor */
+@keyframes blink-caret{
+    0%, 100%{
+        border-color: transparent;
+    }
+    50%{
+        border-color: #d9534f;
+    }
+}
+
+
+/* progress bar animation */
+
+.progress-bar-animation {
+    animation: progressanimation 2s ease-in-out forwards
+}
+
+@keyframes progressanimation {
+    0%{
+        opacity: 0;
+        transform: translateX(-8vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

