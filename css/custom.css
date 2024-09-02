@@ -204,6 +204,10 @@ code {
     .project-card {
         margin: 0.5em 0; /* Adjust margin for smaller screens */
     }
+
+    .project-card .repoButton {
+        margin-top: 1vh
+    }
 }
 
 
