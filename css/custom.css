@@ -215,6 +215,10 @@ code {
     .contact-button {
         margin-top: 3vh; /* Reduce top margin for contact button */
     }
+
+    .line-break-placeholder {
+        display: block; /* Ensure this element is visible and occupies space */
+    }
 }
 
 /* Optional: Adjust margin for smaller screens to handle spacing */
