@@ -159,6 +159,12 @@ code {
 /*  =================================================================================
                                       Projects
     ================================================================================= */
+.projects-container {
+    display: flex;    
+    gap: 20px;                
+    justify-content: center;    
+    flex-wrap: wrap;   
+}
 
 .project-cards-container {
     display: flex;    
