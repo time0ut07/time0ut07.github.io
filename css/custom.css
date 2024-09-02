@@ -197,6 +197,24 @@ code {
     .project-card {
         width: calc(100% - 20px); /* 1 card per row */
     }
+
+    .home {
+        height: auto; /* Allow height to adjust with content */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .home h1 {
+        font-size: 10vh; /* Further reduce font size for smaller screens */
+        margin: 0.2em; /* Adjust margins */
+    }
+
+    .home .icons {
+        margin-top: 5vh; /* Reduce top margin for icons */
+    }
+
+    .contact-button {
+        margin-top: 3vh; /* Reduce top margin for contact button */
+    }
 }
 
 /* Optional: Adjust margin for smaller screens to handle spacing */
