@@ -69,34 +69,6 @@ body {
 .home icons {
     margin-top: 10vh;
 }
-
-.project-cards-container {
-    display: flex;    
-    gap: 20px;                
-    justify-content: center;    
-    flex-wrap: wrap;        
-}
-    
-.project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: calc(33.3333333% - 20px);  
-    box-sizing: border-box;    
-    margin: 1em 0; 
-    border: 1px solid rgba(0, 0, 0, 0.1);        
-}
-    
-.project-card h3 {
-    margin: 0 0 10px;
-    font-size: 20px;
-}
-    
-.project-card p {
-    margin: 10px 0;
-    color: #555;
-}
     
 .buttons {
     margin: 15px 0;   
@@ -122,17 +94,14 @@ body {
     color: #fff; /* Change text and icon color to white on hover */
     opacity: 1; /* Ensure full opacity on hover */
 }
-    
-.languages {
-    margin: 15px 0;
-    font-size: 14px;
-    color: #333;
-}
 
 .languages {
     display: flex;
     align-items: center; /* Align items vertically centered */
     gap: 10px; /* Adjust the space between the <p> and <span> */
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
 }
 
 .languages p {
@@ -196,6 +165,24 @@ code {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.project-cards-container {
+    display: flex;    
+    gap: 20px;                
+    justify-content: center;    
+    flex-wrap: wrap;        
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(33.3333333% - 20px);  
+    box-sizing: border-box;    
+    margin: 1em 0; 
+    border: 1px solid rgba(0, 0, 0, 0.1);        
 }
 
 .project-card h3 {
