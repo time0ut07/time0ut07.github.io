@@ -200,7 +200,7 @@ code {
 }
 
 /* Optional: Adjust margin for smaller screens to handle spacing */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .project-card {
         margin: 0.5em 0; /* Adjust margin for smaller screens */
     }
