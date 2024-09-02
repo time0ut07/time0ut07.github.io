@@ -251,27 +251,27 @@ observer.observe(document.getElementById("typing"));
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-        function checkViewport() {
-            const placeholder = document.querySelector('.line-break-placeholder');
-            if (window.innerWidth <= 768) {
-                // Only add the <br> if it's not already present
-                if (!placeholder.querySelector('br')) {
-                    const br = document.createElement('br');
-                    placeholder.appendChild(br);
-                }
-            } else {
-                // Remove the <br> if it exists
-                const existingBr = placeholder.querySelector('br');
-                if (existingBr) {
-                    placeholder.removeChild(existingBr);
-                }
-            }
-        }
+// document.addEventListener("DOMContentLoaded", function() {
+//         function checkViewport() {
+//             const placeholder = document.querySelector('.line-break-placeholder');
+//             if (window.innerWidth <= 768) {
+//                 // Only add the <br> if it's not already present
+//                 if (!placeholder.querySelector('br')) {
+//                     const br = document.createElement('br');
+//                     placeholder.appendChild(br);
+//                 }
+//             } else {
+//                 // Remove the <br> if it exists
+//                 const existingBr = placeholder.querySelector('br');
+//                 if (existingBr) {
+//                     placeholder.removeChild(existingBr);
+//                 }
+//             }
+//         }
 
-        // Check on page load
-        checkViewport();
+//         // Check on page load
+//         checkViewport();
 
-        // Check on window resize
-        window.addEventListener('resize', checkViewport);
-    });
+//         // Check on window resize
+//         window.addEventListener('resize', checkViewport);
+//     });
