@@ -208,6 +208,24 @@ code {
     .project-card .repoButton {
         margin-top: 1vh;
     }
+
+    .home h1 {
+        font-size: 8vh; /* Further reduce font size for very small screens */
+        margin: 0.1em; /* Adjust margins */
+    }
+
+    .home .icons {
+        margin-top: 3vh; /* Further reduce top margin for icons */
+    }
+
+    .contact-button {
+        margin-top: 2vh; /* Further reduce top margin for contact button */
+    }
+
+    .icons a {
+        font-size: 4em; /* Adjust icon size for small screens */
+        margin: 0 5px; /* Adjust margin around icons */
+    }
 }
 
 
