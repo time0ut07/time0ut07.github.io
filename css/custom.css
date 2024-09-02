@@ -244,10 +244,6 @@ code {
         font-size: 4em; /* Adjust icon size for small screens */
         margin: 0 5px; /* Adjust margin around icons */
     }
-
-    .ln-c, .email {
-        margin-left: 2vh;
-    }
 }
 
 
