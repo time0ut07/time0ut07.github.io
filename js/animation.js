@@ -254,7 +254,7 @@ observer.observe(document.getElementById("typing"));
 document.addEventListener("DOMContentLoaded", function() {
         function checkViewport() {
             const placeholder = document.querySelector('.line-break-placeholder');
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 768) {
                 // Only add the <br> if it's not already present
                 if (!placeholder.querySelector('br')) {
                     const br = document.createElement('br');
