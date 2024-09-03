@@ -192,35 +192,6 @@ code {
     }
 }
 
-/* Responsive styles for small screens */
-@media (max-width: 768px) {
-    .project-card {
-        width: calc(100% - 20px); /* 1 card per row */
-    }
-
-    .home {
-        height: auto; /* Allow height to adjust with content */
-        padding: 10px; /* Reduce padding */
-    }
-
-    .home h1 {
-        font-size: 10vh; /* Further reduce font size for smaller screens */
-        margin: 0.2em; /* Adjust margins */
-    }
-
-    .home .icons {
-        margin-top: 5vh; /* Reduce top margin for icons */
-    }
-
-    .contact-button {
-        margin-top: 3vh; /* Reduce top margin for contact button */
-    }
-
-    .line-break-placeholder {
-        display: block; /* Ensure this element is visible and occupies space */
-    }
-}
-
 .project-card h3 {
     margin: 0 0 10px;
     font-size: 20px;
@@ -389,10 +360,38 @@ footer {
 
 
 
-/* Optional: Adjust margin for smaller screens to handle spacing */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(100% - 20px);
+    }
+
+    .home {
+        height: auto; 
+        padding: 10px;
+    }
+
+    .home h1 {
+        font-size: 10vh; 
+        margin: 0.2em; 
+    }
+
+    .home .icons {
+        margin-top: 5vh;
+    }
+
+    .contact-button {
+        margin-top: 3vh;
+    }
+
+    .tech_left, .tech_right, .soft-left, .soft-right {
+        margin-top: 0 !important;
+    }
+
+}
+
 @media (max-width: 480px) {
     .project-card {
-        margin: 0.5em 0; /* Adjust margin for smaller screens */
+        margin: 0.5em 0; 
     }
 
     .project-card .repoButton {
@@ -400,25 +399,30 @@ footer {
     }
 
     .home h1 {
-        font-size: 8vh; /* Further reduce font size for very small screens */
-        margin: 0.1em; /* Adjust margins */
+        font-size: 8vh; 
+        margin: 0.1em; 
     }
 
     .home .icons {
-        margin-top: 3vh; /* Further reduce top margin for icons */
+        margin-top: 3vh;
     }
 
     .contact-button {
-        margin-top: 2vh; /* Further reduce top margin for contact button */
+        margin-top: 2vh;
     }
 
     .icons a {
-        font-size: 4em; /* Adjust icon size for small screens */
-        margin: 0 5px; /* Adjust margin around icons */
+        font-size: 4em; 
+        margin: 0 5px;
     }
 
     .instagram, .github, .linkedin, .telegram, .email {
         margin: 0 5px;
     }
+
+    .tech_left, .tech_right, .soft-left, .soft-right {
+        margin-top: 0 !important;
+    }
+
 }
 
