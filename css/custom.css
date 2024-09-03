@@ -221,36 +221,6 @@ code {
     }
 }
 
-/* Optional: Adjust margin for smaller screens to handle spacing */
-@media (max-width: 480px) {
-    .project-card {
-        margin: 0.5em 0; /* Adjust margin for smaller screens */
-    }
-
-    .project-card .repoButton {
-        margin-top: 1vh;
-    }
-
-    .home h1 {
-        font-size: 8vh; /* Further reduce font size for very small screens */
-        margin: 0.1em; /* Adjust margins */
-    }
-
-    .home .icons {
-        margin-top: 3vh; /* Further reduce top margin for icons */
-    }
-
-    .contact-button {
-        margin-top: 2vh; /* Further reduce top margin for contact button */
-    }
-
-    .icons a {
-        font-size: 4em; /* Adjust icon size for small screens */
-        margin: 0 5px; /* Adjust margin around icons */
-    }
-}
-
-
 .project-card h3 {
     margin: 0 0 10px;
     font-size: 20px;
@@ -416,3 +386,39 @@ footer {
         transform: translateX(0);
     }
 }
+
+
+
+/* Optional: Adjust margin for smaller screens to handle spacing */
+@media (max-width: 480px) {
+    .project-card {
+        margin: 0.5em 0; /* Adjust margin for smaller screens */
+    }
+
+    .project-card .repoButton {
+        margin-top: 1vh;
+    }
+
+    .home h1 {
+        font-size: 8vh; /* Further reduce font size for very small screens */
+        margin: 0.1em; /* Adjust margins */
+    }
+
+    .home .icons {
+        margin-top: 3vh; /* Further reduce top margin for icons */
+    }
+
+    .contact-button {
+        margin-top: 2vh; /* Further reduce top margin for contact button */
+    }
+
+    .icons a {
+        font-size: 4em; /* Adjust icon size for small screens */
+        margin: 0 5px; /* Adjust margin around icons */
+    }
+
+    .instagram, .github, .linkedin, .telegram, .email {
+        margin: 0 5px;
+    }
+}
+
