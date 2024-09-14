@@ -240,19 +240,27 @@ footer {
 }
 
 .icons a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the color of the parent element */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 
-.instagram, .github, .linkedin, .telegram, .email {
+.instagram, .github, .linkedin, .telegram, .email, .htb-icon {
     font-size: 5em;
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
 }
 
-.instagram:hover, .github:hover, .linkedin:hover, .telegram:hover, .email:hover {
+.htb-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle; 
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
+}
+
+.instagram:hover, .github:hover, .linkedin:hover, .telegram:hover, .email:hover, .htb-icon:hover {
     transform: translateY(-10px)
 }
 
