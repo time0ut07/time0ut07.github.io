@@ -221,7 +221,8 @@ window.addEventListener('scroll', function() {
 // --------------------------Typing Animation--------------------------
 
 var i = 0;
-var txt = 'Driven to advance cybersecurity and protect against emerging threats.';
+// var txt = 'Driven to advance cybersecurity and protect against emerging threats.';
+var txt = 'Aspiring Red Teamer/PenTester || OSCP+ OSCP || CRTP || eJPTv2 || OSSA'
 var speed = 50;
 
 function typeWriter() {
