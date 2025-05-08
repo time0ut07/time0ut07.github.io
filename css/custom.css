@@ -10,18 +10,6 @@ body {
     transition: all 0.5s;
 }
 
-.arrowup {
-    z-index: 10;
-    margin-left: 70em;
-    margin-top: -10em
-}
-
-
-.arrowup:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-in-out
-}
-
 .progress_bar {
     height: 5px;
 }
@@ -380,7 +368,9 @@ footer {
     }
 }
 
-
+/*  =================================================================================
+                                        resize
+    ================================================================================= */
 
 @media (max-width: 768px) {
     .project-card {
@@ -407,6 +397,10 @@ footer {
 
     .tech_left, .tech_right, .soft-left, .soft-right {
         margin-top: 0 !important;
+    }
+
+    #view_milestones {
+        margin-top: 10px !important;
     }
 
 }
@@ -444,6 +438,10 @@ footer {
 
     .tech_left, .tech_right, .soft-left, .soft-right {
         margin-top: 0 !important;
+    }
+
+    #view_milestones {
+        margin-top: 10px !important;
     }
 
 }

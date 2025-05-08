@@ -134,7 +134,7 @@ function showProjects(listId, clickedButton) {
 
 function showDocs(listId, clickedButton) {
   // Hide all elements with the IDs 'guides' or 'write-ups'
-  document.querySelectorAll('#guides, #write-ups').forEach(div => {
+  document.querySelectorAll('#blogs, #guides, #write-ups').forEach(div => {
       div.classList.add('hidden');
   });
   
@@ -247,8 +247,6 @@ var observer = new IntersectionObserver(onScreen, {
   threshold: 0.1 // Trigger when 10% of the element is visible
 });
 
-// Start observing the element
-observer.observe(document.getElementById("typing"));
 
 
 
