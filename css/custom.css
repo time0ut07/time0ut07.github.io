@@ -159,6 +159,81 @@ code {
 }
 
 /*  =================================================================================
+                                Projects - dropping texts
+    ================================================================================= */
+
+    
+.dropping-texts {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 100px; /* reserve space just enough for words like "Memorable" */
+}
+
+.left-text, .right-text {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 4px; /* tiny space left and right */
+}
+
+.dropping-texts > span {
+    font-size: 0px;
+    opacity: 0;
+    position: absolute;
+    font-weight: bold;  /* moved here if you want all spans bold */
+    transition: opacity 0.5s ease-in-out, font-size 0.5s ease-in-out;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-bottom: 16px;  /* no need for margin-bottom */
+}
+
+.dropping-texts > span:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+  }
+  .dropping-texts > span:nth-child(2) {
+    animation: roll 5s linear infinite 1.25s;
+  }
+  .dropping-texts > span:nth-child(3) {
+    animation: roll 5s linear infinite 2.5s;
+  }
+  .dropping-texts > span:nth-child(4) {
+    animation: roll 5s linear infinite 3.75s;
+  }
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    transform: rotate(15deg);
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    transform: rotate(15deg);
+  }
+}
+
+/*  =================================================================================
                                       Projects
     ================================================================================= */
 .projects-container {

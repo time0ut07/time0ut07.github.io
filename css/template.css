@@ -156,6 +156,18 @@ img {
     font-size: large;
 }
 
+.updated {
+    font-size: 13px;
+    color: #999;
+    margin: 0;
+}
+
+.updated-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #table-of-content {
     width: 100%;
     margin-bottom: 10vh;
