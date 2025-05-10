@@ -6,7 +6,7 @@ body {
 }
 
 .navbar .logo {
-    content: url('../images/logo/logo.png');
+    content: url('../images/logo/wombo.png');
     transition: all 0.3s ease;
 }
 
