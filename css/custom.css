@@ -5,7 +5,16 @@ body {
     max-width: 100%;
 }
 
-.nav-link:hover {
+.navbar .logo {
+    content: url('../images/logo/logo.png');
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo {
+    content: url('../images/logo/favicon.png');
+}
+
+.nav-link:hover, .logo:hover {
     transform: scale(0.9);
     transition: all 0.5s;
 }
@@ -29,11 +38,10 @@ body {
     color: black !important;
 }
 
-/* When scrolled — change color */
 .navbar.scrolled .nav-link,
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .navbar-toggler-icon i {
-    color: #dc3545 !important; /* or any color you want */
+    color: #dc3545 !important;
 }
 
 
@@ -645,7 +653,7 @@ footer {
   }
 
 .timeline-card {
-	padding: 0!important;
+	padding: 0 !important;
 
 	p {
 		padding: 0 20px;
