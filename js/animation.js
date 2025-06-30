@@ -200,7 +200,7 @@ document.querySelectorAll('.docsButton').forEach(button => {
           return;
       }
       
-      const zipUrl = `https://time0ut07.github.io/${docType}/${directory}`;
+      const zipUrl = `https://time0ut07.github.io/posts/${docType}/${directory}`;
       
       window.open(zipUrl, '_blank');
   });
