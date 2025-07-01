@@ -274,11 +274,15 @@ th {
     }
 
     #header {
-        margin-top: 10vh;
+        margin-top: 18vh;
     }
 
     img {
-        max-width: 400px;
+        max-width: 380px;
+    }
+
+    table {
+        font-size: 0.8rem;
     }
 
     .container-lg {
@@ -307,11 +311,15 @@ th {
     }
 
     #header {
-        margin-top: 10vh;
+        margin-top: 18vh;
     }
 
     img {
-        max-width: 350px;
+        max-width: 320px;
+    }
+
+    table {
+        font-size: 0.7rem;
     }
   
     .container-lg {
