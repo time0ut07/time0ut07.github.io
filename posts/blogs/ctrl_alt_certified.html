@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects</title>
+
+    <link rel="icon" href="./../../images/logo/favicon.png" type="image/png">
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Javascripts   Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./../../css/template.css">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/73d4014345.js" crossorigin="anonymous"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+ 
+    <!--navbar start-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-danger fw-bold fs-4" href="index.html">
+                <img src="./../../images/logo/favicon.png" class="logo" alt="time0ut logo" style="height: 40px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars text-danger"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item">
+                        <a href="./../../index.html" class="nav-link text-danger me-3">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./../../posts.html" class="nav-link text-danger me-3">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./../../projects.html" class="nav-link text-danger me-3">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./../../milestones.html" class="nav-link text-danger me-3">Milestones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar end-->
+
+
+    <!-- scroll to top button -->
+    <button id="scrollUpBtn" class="scroll-to-top-btn" onclick="scrollToTop()">
+        &#11165;
+    </button>
+
+
+    <!-- header start -->
+    <section class="header" id="header">
+        <div class="container-lg">
+            <h2 id="template-header-title">Ctrl + Alt + Certified</h2>
+            <div class="updated-container">
+                <p class="updated">1/7/2025</p>
+                <p id="min_read" class="updated">5-6 min read</p>
+            </div>
+            <div id="table-of-content" class="mt-3">
+                <button id="template-header-btn" class="btn w-100 mb-2" data-bs-toggle="collapse" data-bs-target="#tocList" aria-expanded="true" aria-controls="tocList">
+                    <span id="toc-icon" style="display: inline-block; transition: transform 0.3s;">&#9654;</span> 
+                    Table of Contents
+                </button>   
+                <ul id="tocList" class="collapse list-group">
+
+                    <li class="list-group-item">
+                        <a id="list-item" href="#man_ctrl_alt_certified">&#0149; man ctrl_alt_certified</a>
+                    </li>
+                    
+                    <li class="list-group-item">
+                        <a id="list-item" href="#whoami">&#0149; whoami</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a id="list-item" href="#date">&#0149; date</a>
+                    </li>
+                    
+                    <li class="list-group-item">
+                        <a id="list-item" href="#tree_certs">&#0149; tree ~/certs</a>
+                        <ul class="sub-list ms-3">
+                            <li><a id="list-item" href="#ejpt">eJPTv2 (October 2024)</a></li>
+                            <li><a id="list-item" href="#crtp">CRTP (December 2024)</a></li>
+                            <li><a id="list-item" href="#oscp">OSCP+ (April 2025)</a></li>
+                            <li><a id="list-item" href="#crto">CRTO (May 2025)</a></li>
+                            <li><a id="list-item" href="#cadpenx">C-ADPenX (May 2025)</a></li>
+                            <li><a id="list-item" href="#crte">CRTE (June 2025)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a id="list-item" href="#faq">&#0149; FAQ</a>
+                        <ul class="sub-list ms-3">
+                            <li><a id="list-item" href="#faq1">Would you recommend this certification order?</a></li>
+                            <li><a id="list-item" href="#faq2">Are certifications worth it?</a></li>
+                            <li><a id="list-item" href="#faq3">How does OSCP AD portion compare to CRTP, CRTO, and CRTE?</a></li>
+                            <li><a id="list-item" href="#faq4">How hard is OSCP?</a></li>
+                            <li><a id="list-item" href="#faq5">What's next?</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a id="list-item" href="#conclusion">&#0149; Conclusion</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>    
+    <!-- header end -->
+
+
+    <!-- content start -->
+    <section class="content" id="content">
+        <div class="container-lg">
+
+            <h3 id="man_ctrl_alt_certified">man ctrl_alt_certified</h3>
+            <p>While starting my internship in September 2024, I decided to dive deep into offensive security (Yes, during my internship). Inspired by my peers, I took my first step into the never-ending rabbit hole of offensive security certifications.</p>
+            <p>In this first post, I'll share my experience grinding through intermediate-level certifications and rating them from a noob's perspective. I will also do some comparisions and answer some FAQs.</p>
+            <p>The goal? To share my certification journey, give honest reviews, and help fellow beginners navigate the offensive path.</p>
+
+            <p class="quote-style">All certifications were paid for out of my pocket to make sure I stay committed and don't slack off. RIP intern allowance...</p>
+
+
+
+            <h4 id="whoami">whoami</h4>
+            <p>Hi, I'm Alden! I recently graduated from Singapore Polytechnic with a Diploma in Information Security Management (now called Cybersecurity and Digital Forensics).</p>
+            <p>Since starting cybersecurity in 2022, I've explored various domains in school, but offensive security always intrigued me. That curiosity eventually led me to hands-on labs, CTFs, and certification grinds.</p>
+
+
+
+            <h4 id="date">date</h4>
+            <p>At the time of writing, I've just wrapped up my CRTE report (about 2.5 weeks ago) and treated myself to some couch potato time. Decided that it was time to grind again.</p>
+
+
+
+            <h3 id="tree_certs">tree ~/certs</h3>
+            <p>Coming from a cybersecurity background through school, I had a decent foundation, but diving into Offensive Security was something I wanted to try for myself. I approach things with a bit of an overkill mindset. I tend to overthink, over-analyze, and go all-in on the certifications. Even if I already know the content, I'll still go through all the materials and complete the labs thoroughly.</p>
+            <p>That's just my style: squeeze out every bit of value, and go overkill. Meanwhile, my friends' approach? "Learn during the exam 😄".</p>
+            <p>Before diving into the mini-reviews, I would like to emphasize that the ratings are purely based on my personal experience. Everyone learns differently, so take them with a grain of salt.</p>
+
+
+
+            <h4 id="ejpt">eJPTv2 (October 2024)</h4>
+            <img src="./../../images/milestones/ejpt.jpg" alt="eJPTv2">
+            <p>This was my first certification. Before that, I had done some HTB, TryHackMe rooms, and taken an ethical hacking module in school.</p>
+            <p>I studied for 73 hours over 35 days and finished the exam in just over 12 hours (thanks to a missed port scan... oops).</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>6/10</td>
+                    <td>6/10</td>
+                    <td>7/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>Beginner-friendly but slow-paced. Good coverage, though most of it felt like a recap for me.</td>
+                    <td>Mostly followed the videos. A bit too guided and repetitive with little room for thinking.</td>
+                    <td>Fun for a first-timer, but attack paths were simple and felt repetitive in hindsight.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Although I had prior knowledge, eJPT was a solid confidence booster. Highly recommended for beginners looking to get started in offensive security.</p>
+
+
+
+            <h4 id="crtp">CRTP (December 2024)</h4>
+            <img src="./../../images/milestones/CRTP.jpeg" alt="CRTP">
+            <p>My first exposure to Active Directory, came in with zero knowledge. I studied for about 92 hours over 35 days, and the exam took me 23 hours.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>7.5/10</td>
+                    <td>8/10</td>
+                    <td>7.5/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>Clear explanations, but most of the real learning came from hands-on practice.</td>
+                    <td>Very enjoyable. Lots of chances to try different attack paths and experiment freely.</td>
+                    <td>Pretty straightforward overall, though I found it tough as a complete beginner.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>I would recommend anyone who wants to try out Active Directory in offensive security, I enjoyed every bit of CRTP. The skill floor might be high, but the skill ceiling is infinite.</p>
+
+
+
+            <h4 id="oscp">OSCP+ (April 2025)</h4>
+            <img src="./../../images/milestones/OSCPPlus_Cert.png" alt="OSCP+">
+            <p>Like many others, achieving OSCP is a huge milestone for me. Though I did spend 2-3 months of my internship allowance D: I do feel that completing this certification early is beneficial.</p>
+            <p class="quote-style">Since I'm aiming for a career in offensive security in Singapore, having either the OSCP or CREST CRT certification is a baseline requirement.</p>
+            <p>OSCP was a major milestone. It took a huge chunk of my internship allowance, but I wanted to get it done early. I spent 318 hours over 96 days preparing and completed the exam in 15 hours, report included.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>6/10</td>
+                    <td>7/10</td>
+                    <td>6.5/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>The content was thorough but felt quite lengthy at times.</td>
+                    <td>The challenge labs were useful, especially for the AD section, but not particularly enjoyable.</td>
+                    <td>Went fine due to my overkill preparation, but I disliked the live proctoring and got baited by rabbit holes.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>While it's a solid HR bypass certification, I wouldn't recommend paying for it out of pocket unless you have to. There are plenty of other resources that cover similar content on the internet.</p>
+            <p class="quote-style">Fun fact: I completed OSCP before my 20th birthday :D</p>
+
+
+
+            <h4 id="crto">CRTO (May 2025)</h4>
+            <img src="./../../images/milestones/CRTO_Exam_Progress.jpeg" alt="CRTO">
+            <p>GOATED. Took it right before the revamp and PPP pricing. Despite the cost, I'm glad I supported @Rastamouse (pain).</p>
+            <p>I managed to finish the course and lab in 67 hours over 21 days. The exam took 5 hours for me to achieve a passing score.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>9/10</td>
+                    <td>9.5/10</td>
+                    <td>9.5/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>Short, well-structured, and straight to the point. Easy to digest as a beginner.</td>
+                    <td>Well-built and completely stable. Everything just worked. (W Cobalt Strike)</td>
+                    <td>Very straightforward and stable, with no rabbit holes or unexpected hurdles.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>This cert was one of my favorite experiences. Straightforward content, stable lab environment, and no-nonsense. Would highly recommend it.</p>
+
+
+
+            <h4 id="cadpenx">C-ADPenX (May 2025)</h4>
+            <img src="./../../images/milestones/C-ADPenX.jpeg" alt="C-ADPenX">
+            <p>Discovered this cert by The SecOps Group on LinkedIn. Took it while preparing for CRTE.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>8/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Surprisingly fun. Unique attack paths and well-crafted questions that kept things engaging.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>There were no materials or labs, so I didn't know what to expect. However, the exam had MCQs that helped guide you. Despite the lack of course content, I learned a lot during the exam itself.</p>
+            <p>If you see it on discount, grab it. It's a fun way to gauge your current level.</p>
+
+
+
+            <h4 id=crte>CRTE (June 2025)</h4>
+            <img src="./../../images/milestones/CRTE_Cert.png" alt="CRTE">
+            <p>Another one from Altered Security. Spent 53 hours over 20 days. The exam took 19 hours.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>Materials</th>
+                    <th>Lab</th>
+                    <th>Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Rating</td>
+                    <td>7/10</td>
+                    <td>9/10</td>
+                    <td>8/10</td>
+                    </tr>
+                    <tr>
+                    <td>Reasoning</td>
+                    <td>Mostly similar to CRTP, but the new content was still helpful and well-explained.</td>
+                    <td>One of the better labs, spent the entire duration testing and experimenting. GOATED.</td>
+                    <td>Took time to crack, but solving each hurdle felt extremely rewarding.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>CRTE builds on CRTP with deeper concepts and better labs. The environment was excellent, and the exam was rewarding (though not easy). Highly recommended as a solid intermediate certification.</p>
+
+
+
+            <h3 id="faq">FAQ</h3>
+            <p>Before we dive into the FAQ, just a reminder that these answers reflect my perspective. So take them with another grain of salt.</p>
+
+
+            <h4 id="faq1">Would you recommend this certification order?</h4>
+            <p>Yes and no.</p>
+            <p>If you're a complete beginner and want to get into the field of offensive security, I'd recommend this path, as it builds strong fundamentals through eJPT, CRTP, and OSCP, and gradually allows you to level up with CRTO and CRTE.</p>
+            <p>That said, it is time-consuming and can lead to burnout without proper planning. If you already have some offensive security knowledge, feel free to jump into certs that align with your interests, like AD or red teaming. With enough dedication, you'll still gain a lot and do well in the exams.</p>
+
+
+            <h4 id="faq2">Are certifications worth it?</h4>
+            <p>Yes... and no.</p>
+            <p>Certifications can be expensive and time-consuming, but they're worth it if you approach them with the intent to learn, not just to be certified.</p>
+            <p>They don't guarantee you a job. Curiosity, hands-on experience, and personal projects are a huge factor as well. If you cannot afford certifications, there are free platforms like Hack The Box. But if you have limited time (like I did) and know you want to pursue offensive security, certifications can be a productive way to build skills and stay focused.</p>
+
+
+            <h4 id="faq3">How does OSCP AD portion compare to CRTP, CRTO, and CRTE?</h4>
+            <p>I found the AD portion of OSCP to feel a bit... "artificial" compared to CRTP, CRTO, or CRTE. Not to bash OffSec (they did a good job) but it lacks the depth and realism those other courses offer. Once you've tried them, you'll likely understand what I mean.</p>
+
+
+            <h4 id="faq4">How hard is OSCP?</h4>
+            <p>With enough practice or raw talent, OSCP can be manageable, like most things.</p>
+            <p>If you're naturally gifted (like some of my friends), you might just breeze through it without much practice.</p>
+            <p>If not, focus on grinding Proving Grounds for the Linux portion and complete the challenge labs for AD. You'll learn best through hands-on work, so speedrun the course and dive deeper into areas you're less familiar with.</p>
+
+
+
+            <h4 id="faq5">What's next?</h4>
+            <p>While waiting to enlist for National Service, I plan to work on some light R&D and tackle a few side quests like the revamped CRTO and CRTeamer (since I already have the voucher). Otherwise, I'll just chill until it's time to serve.</p>
+            <p>As of now, I don't have solid plans for the heavier certs like CPTS, CRTO II, or CAPE yet, but I aim to complete them in the next few years. I'm also actively looking for offensive security job opportunities to gain experience but I only have a few months left before serving.</p>
+
+
+            <h3 id="conclusion">Conclusion</h3>
+            <p>Cybersecurity isn't an easy field to break into. Be ready to keep learning, as what works today might not work tomorrow.</p>
+            <p>Certifications are great for building skills and proving your knowledge, but real experience and R&D are just as important.</p>
+            <p>Never stop grinding.</p>
+
+        </div>
+    </section>    
+    <!-- content end -->
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="container-fluid text-white justify-content-center text-center">
+            <div class="footerBottom">
+                <p>Copyright &copy; 2025; Designed by <span class="designer">time0ut</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="./../../js/animation.js"></script>
+    <script src="./../../js/template.js"></script>
+
+</body>
+</html>

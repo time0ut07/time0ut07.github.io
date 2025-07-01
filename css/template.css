@@ -5,6 +5,10 @@ body {
     color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .nav-link:hover {
     transform: scale(0.9);
@@ -22,7 +26,6 @@ body {
 .navbar-toggler-icon i {
     color: rgba(220, 53, 69, 0.8) !important;
 }
-
 
 footer {
     background-color: rgba(220, 53, 69, 0.6); /* Background color */
@@ -97,9 +100,41 @@ p {
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 650px;
+    margin: 2rem 0;              /* adds vertical spacing */
+    padding-left: 0;             /* reset padding */
+    padding-right: 0;
 }
+
+.quote-style {
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  margin: 1em 0;
+  color: #555;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.9rem;
+  background-color: #222431;
+  color: #f1f1f1;
+}
+
+th, td {
+  border: 1px solid #444654;
+  padding: 0.75em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #2b2d3a;
+  font-weight: bold;
+}
+
 
 
 /*  =================================================================================
