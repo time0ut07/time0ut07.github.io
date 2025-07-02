@@ -202,7 +202,7 @@ document.querySelectorAll('.docsButton').forEach(button => {
       
       const zipUrl = `https://time0ut07.github.io/posts/${docType}/${directory}.html`;
       
-      window.open(zipUrl, '_blank');
+      window.open(zipUrl);
   });
 });
 
